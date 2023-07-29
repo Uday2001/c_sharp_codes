@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Initialisers
+{
+    class Employee1
+    {
+        public int EmpId { set; get; }
+        public string Name { set; get; }
+        public string Designation { set; get; }
+        public double Salary { set; get; }
+    }  
+       
+
+    
+    class CollectionInitialisers
+    {
+        public static void Main(string[] args)
+        {
+            List<Employee1> EmpList = new List<Employee1>()
+            {
+                new Employee1(){EmpId=208,Name="shiva",Designation="project lead",Salary=23000},
+                new Employee1(){EmpId=238,Name="vinodh",Designation="system engineer",Salary=23000},
+                 new Employee1(){EmpId=237,Name="yeswanth",Designation="Embedded",Salary=37000}
+
+            };
+            foreach (Employee1 E in EmpList)
+                Console.WriteLine(E.EmpId + "\t" +E.Name+"\t"+E.Designation+"\t"+E.Salary);
+            Console.ReadLine();
+            
+        }
+    }
+}
